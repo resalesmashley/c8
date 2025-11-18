@@ -3580,6 +3580,24 @@ const SHOP_PRODUCTS = [
         imageAlt: 'Rows of sharpened colored pencils and craft supplies on a desk.'
     },
     {
+        id: 'snack-pack',
+        name: 'Snack Pack for 10',
+        description: 'Juice boxes, pretzels, and fruit cups for a full classroom.',
+        price: 14,
+        badge: 'Top pick',
+        image: 'https://pixabay.com/get/gcf60c436f524e038813e9d265059704d85713122e914c44b11347a73aa81a6bd7682875a400a8b82bf33b8dd4d8c7291c4c82b0906bbb18d7291bfc6cedd238e_1280.jpg',
+        imageAlt: 'Colorful wrapped snacks spilling out of a classroom treat jar.'
+    },
+    {
+        id: 'craft-kit',
+        name: 'Bible Story Craft Kit',
+        description: 'Prepped supplies for 12 kids with step-by-step instructions.',
+        price: 18,
+        badge: 'Ready to use',
+        image: 'https://pixabay.com/get/gec7f761c81c58eab4e0dddbb79c4c35794aa74253920d72fb761ca3b0d08fded0f82afe7ade8a8b07a5b225b63430142ca13e23140bb09ab51729bf160e0a296_1280.jpg',
+        imageAlt: 'Rows of sharpened colored pencils ready for a classroom craft.'
+    },
+    {
         id: 'volunteer-tee',
         name: 'Volunteer T-Shirt',
         description: 'Soft cotton shirt with BCC logo. Unisex sizing.',
