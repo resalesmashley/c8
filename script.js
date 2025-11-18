@@ -3585,7 +3585,7 @@ const SHOP_PRODUCTS = [
         description: 'Soft cotton shirt with BCC logo. Unisex sizing.',
         price: 22,
         badge: 'New',
-        image: 'https://images.unsplash.com/photo-1618354691714-7d92150909db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTAxMTZ8MHwxfHNlYXJjaHwzfHxzdGFjayUyMG9mJTIwdm9sdW50ZWVyJTIwdCUyMHNoaXJ0c3xlbnwwfDB8fHwxNzYzMzQxMzE0fDA&ixlib=rb-4.1.0&q=80&w=1080',
+        image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1080&q=80',
         imageAlt: 'Stack of soft volunteer t-shirts folded on a table.'
     },
     {
@@ -3594,8 +3594,8 @@ const SHOP_PRODUCTS = [
         description: 'Includes 30 stickers and 10 reusable sleeves.',
         price: 9,
         badge: 'Classroom essential',
-        image: 'https://pixabay.com/get/g3559acccfce7216ff9e7dc0d8bdbb2b0d2989f72bd535d5308f8ceb43436d5f2a991dcce9685aa3aff0fc303443d8efa8185d89751831e9bad498a62e87ce425_1280.jpg',
-        imageAlt: 'Organized classroom supplies with scissors, tape, and pencils on a desk.'
+        image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80',
+        imageAlt: 'Organized craft supplies with scissors, tape, and pens on a desk.'
     },
     {
         id: 'clean-up',
@@ -3603,7 +3603,7 @@ const SHOP_PRODUCTS = [
         description: 'Disinfecting wipes, tissues, and hand sanitizer trio.',
         price: 12,
         badge: 'Staff favorite',
-        image: 'https://images.unsplash.com/photo-1759846866217-e627e4478f82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTAxMTZ8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMHN1cHBsaWVzJTIwYnVja2V0fGVufDB8MHx8fDE3NjMzNDE2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        image: 'https://images.unsplash.com/photo-1581579186983-9b53db9c1127?auto=format&fit=crop&w=1080&q=80',
         imageAlt: 'Colorful cleaning supplies arranged in a bucket and tray.'
     }
 ];
