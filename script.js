@@ -3603,8 +3603,8 @@ const SHOP_PRODUCTS = [
         description: 'Disinfecting wipes, tissues, and hand sanitizer trio.',
         price: 12,
         badge: 'Staff favorite',
-        image: 'https://images.unsplash.com/photo-1581579186983-9b53db9c1127?auto=format&fit=crop&w=1080&q=80',
-        imageAlt: 'Colorful cleaning supplies arranged in a bucket and tray.'
+        image: 'https://images.unsplash.com/photo-1583947582886-b12f9b4fdfc1?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Spray bottle, gloves, and sponges gathered in a cleaning caddy.'
     }
 ];
 
