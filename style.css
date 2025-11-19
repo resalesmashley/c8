@@ -1669,6 +1669,71 @@ tr:hover {
     position: relative;
 }
 
+.event-modal-content {
+    width: min(720px, 95vw);
+    max-width: 720px;
+}
+
+.event-modal-form .form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.event-modal-form .form-group {
+    flex: 1 1 260px;
+}
+
+.event-modal-form input,
+.event-modal-form textarea {
+    width: 100%;
+    border: 1px solid #d8dde5;
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-modal-form input:focus,
+.event-modal-form textarea:focus {
+    outline: none;
+    border-color: #5788f5;
+    box-shadow: 0 0 0 3px rgba(87, 136, 245, 0.2);
+}
+
+.event-modal-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.event-modal-form .form-error {
+    color: #c62828;
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+    min-height: 1.2rem;
+    display: block;
+}
+
+.event-modal-form .form-feedback {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    background: #f0f7ff;
+    color: #194889;
+    border-radius: 10px;
+    border: 1px solid #c9ddff;
+    display: none;
+}
+
+.event-modal-form .form-feedback.success {
+    background: #f0fff4;
+    color: #1b5e20;
+    border-color: #b4e0c3;
+}
+
+.event-modal-form .modal-actions {
+    justify-content: flex-end;
+}
+
 .lesson-plan-modal .modal-body {
     padding: 2rem;
     overflow-y: auto;

@@ -2505,18 +2505,132 @@ function formatStaffStatus(status) {
     return 'Inactive';
 }
 
+let activeEventName = '';
+
+function setEventRegistrationError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    if (field) {
+        field.setAttribute('aria-invalid', 'true');
+    }
+
+    const errorEl = document.querySelector(`[data-error-for="${fieldId}"]`);
+    if (errorEl) {
+        errorEl.textContent = message;
+    }
+}
+
+function clearEventRegistrationErrors() {
+    const errorEls = document.querySelectorAll('#event-registration-form .form-error');
+    errorEls.forEach(el => el.textContent = '');
+
+    const invalidFields = document.querySelectorAll('#event-registration-form [aria-invalid="true"]');
+    invalidFields.forEach(el => el.removeAttribute('aria-invalid'));
+}
+
+function openEventRegistration(eventName) {
+    const modal = document.getElementById('event-registration-modal');
+    const subtitle = document.getElementById('event-modal-subtitle');
+    const eventInput = document.getElementById('event-name-input');
+    const feedback = document.getElementById('event-registration-feedback');
+    const form = document.getElementById('event-registration-form');
+
+    if (!modal || !form) return;
+
+    activeEventName = eventName || 'BCC Event';
+
+    if (subtitle) {
+        subtitle.textContent = `${activeEventName} • Children's Ministry`;
+    }
+
+    if (eventInput) {
+        eventInput.value = activeEventName;
+    }
+
+    if (feedback) {
+        feedback.textContent = '';
+        feedback.classList.remove('success');
+        feedback.style.display = 'none';
+    }
+
+    form.reset();
+    clearEventRegistrationErrors();
+
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    document.getElementById('event-parent-name')?.focus();
+}
+
+function closeEventRegistration() {
+    const modal = document.getElementById('event-registration-modal');
+    if (!modal) return;
+
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    activeEventName = '';
+}
+
+function handleEventRegistrationSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const name = (formData.get('parentName') || '').trim();
+    const email = (formData.get('email') || '').trim();
+    const phone = (formData.get('phone') || '').trim();
+    const children = (formData.get('children') || '').trim();
+    const emergency = (formData.get('emergency') || '').trim();
+    const notes = (formData.get('notes') || '').trim();
+
+    clearEventRegistrationErrors();
+
+    let hasError = false;
+
+    if (!name) {
+        setEventRegistrationError('event-parent-name', 'Please add your name.');
+        hasError = true;
+    }
+
+    if (!email) {
+        setEventRegistrationError('event-email', 'Please enter a contact email.');
+        hasError = true;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setEventRegistrationError('event-email', 'Enter a valid email address.');
+        hasError = true;
+    }
+
+    if (!children) {
+        setEventRegistrationError('event-child-names', 'List who is attending.');
+        hasError = true;
+    }
+
+    if (!emergency) {
+        setEventRegistrationError('event-emergency-contact', 'Add an emergency contact.');
+        hasError = true;
+    }
+
+    if (hasError) return;
+
+    const feedback = document.getElementById('event-registration-feedback');
+    if (feedback) {
+        const details = [
+            `We'll reserve spots for: ${children}.`,
+            phone ? `We'll text ${phone} if we have quick questions.` : null,
+            notes ? `Notes added: ${notes}` : null
+        ].filter(Boolean).join(' ');
+
+        feedback.textContent = `Thank you, ${name}! Your family is registered for ${activeEventName}. ${details || ''} Confirmation was sent to ${email}. (Demo mode)`;
+        feedback.classList.add('success');
+        feedback.style.display = 'block';
+        feedback.focus?.();
+    }
+
+    showToast('Registration submitted! (Demo mode)');
+    event.target.querySelector('button[type="submit"]')?.focus();
+}
+
 function registerForEvent(eventName) {
-    alert('🛒 Cart-Style Event Registration\n\n' +
-          'Event: ' + eventName + '\n\n' +
-          'Step 1: Select participants\n' +
-          '☑ Emma Smith (Age 4)\n\n' +
-          'Step 2: Additional options\n' +
-          '○ T-shirt size: ___\n' +
-          '○ Dietary restrictions: ___\n' +
-          '○ Photo consent: [Yes/No]\n\n' +
-          'Step 3: Emergency contact\n' +
-          'Step 4: Review and confirm\n\n' +
-          '(Demo mode - Multi-step registration process)');
+    openEventRegistration(eventName);
 }
 
 // Form Handlers
@@ -2575,6 +2689,19 @@ document.addEventListener('DOMContentLoaded', function() {
             registerForEvent(eventName);
         });
     });
+
+    document.getElementById('event-modal-close')?.addEventListener('click', closeEventRegistration);
+    document.getElementById('event-modal-cancel')?.addEventListener('click', closeEventRegistration);
+    document.getElementById('event-registration-form')?.addEventListener('submit', handleEventRegistrationSubmit);
+
+    const eventModal = document.getElementById('event-registration-modal');
+    if (eventModal) {
+        eventModal.addEventListener('click', function(event) {
+            if (event.target === eventModal) {
+                closeEventRegistration();
+            }
+        });
+    }
 
     renderVolunteerRoles();
     hydrateVolunteerModal();
