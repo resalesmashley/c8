@@ -3603,8 +3603,54 @@ const SHOP_PRODUCTS = [
         description: 'Disinfecting wipes, tissues, and hand sanitizer trio.',
         price: 12,
         badge: 'Staff favorite',
-        image: 'https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Gloved hands holding a spray bottle and microfiber cloth over a countertop.'
+        image: 'https://images.unsplash.com/photo-1583946130145-c05bf552f3a5?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Spray bottle, disinfectant, microfiber cloth, and gloves arranged for cleaning.'
+    }
+];
+    {
+        id: 'snack-pack',
+        name: 'Snack Pack for 10',
+        description: 'Juice boxes, pretzels, and fruit cups for a full classroom.',
+        price: 14,
+        badge: 'Top pick',
+        image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Colorful fruit cups and pretzels laid out for a group snack.'
+    },
+    {
+        id: 'craft-kit',
+        name: 'Bible Story Craft Kit',
+        description: 'Prepped supplies for 12 kids with step-by-step instructions.',
+        price: 18,
+        badge: 'Ready to use',
+        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1080&q=80',
+        imageAlt: 'Rows of sharpened colored pencils and craft supplies on a desk.'
+    },
+    {
+        id: 'volunteer-tee',
+        name: 'Volunteer T-Shirt',
+        description: 'Soft cotton shirt with BCC logo. Unisex sizing.',
+        price: 22,
+        badge: 'New',
+        image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1080&q=80',
+        imageAlt: 'Stack of soft volunteer t-shirts folded on a table.'
+    },
+    {
+        id: 'name-badges',
+        name: 'Name Badge Refill Pack',
+        description: 'Includes 30 stickers and 10 reusable sleeves.',
+        price: 9,
+        badge: 'Classroom essential',
+        image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80',
+        imageAlt: 'Organized craft supplies with scissors, tape, and pens on a desk.'
+    },
+    {
+        id: 'clean-up',
+        name: 'Clean-Up Bundle',
+        description: 'Disinfecting wipes, tissues, and hand sanitizer trio.',
+        price: 12,
+        badge: 'Staff favorite',
+        image: 'https://images.unsplash.com/photo-1583947582886-b12f9b4fdfc1?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Spray bottle, gloves, and sponges gathered in a cleaning caddy.'
     }
 ];
 
