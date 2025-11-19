@@ -269,6 +269,61 @@
                     </div>
                 </div>
 
+                <div id="event-registration-modal" class="modal event-modal" role="dialog" aria-modal="true" aria-labelledby="event-modal-title" aria-hidden="true">
+                    <div class="modal-content event-modal-content" role="document">
+                        <div class="modal-header event-modal-header">
+                            <div>
+                                <h3 id="event-modal-title">Register for Event</h3>
+                                <p id="event-modal-name" class="event-modal-subtitle"></p>
+                            </div>
+                            <button type="button" class="btn-icon" id="event-modal-close" aria-label="Close event registration">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <form id="event-registration-form" class="event-form" novalidate>
+                            <div class="event-form-body">
+                                <div class="event-form-grid">
+                                    <div class="form-group">
+                                        <label for="event-guardian-name">Your Name *</label>
+                                        <input type="text" id="event-guardian-name" name="guardianName" autocomplete="name" required>
+                                        <span class="form-error" data-error-for="event-guardian-name"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-guardian-email">Email *</label>
+                                        <input type="email" id="event-guardian-email" name="guardianEmail" autocomplete="email" required>
+                                        <span class="form-error" data-error-for="event-guardian-email"></span>
+                                    </div>
+                                </div>
+                                <div class="event-form-grid">
+                                    <div class="form-group">
+                                        <label for="event-child-details">Children attending *</label>
+                                        <textarea id="event-child-details" name="childDetails" rows="3" placeholder="e.g., Emma (age 6) and Noah (age 8)"></textarea>
+                                        <span class="form-error" data-error-for="event-child-details"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-headcount">Total guests *</label>
+                                        <input type="number" id="event-headcount" name="headcount" min="1" step="1" placeholder="2">
+                                        <span class="form-error" data-error-for="event-headcount"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="event-notes">Allergies or notes for our team</label>
+                                    <textarea id="event-notes" name="notes" rows="3" placeholder="Share dietary needs, accessibility requests, or volunteer interests."></textarea>
+                                </div>
+                                <p id="event-registration-status" class="form-feedback" role="status" aria-live="polite"></p>
+                            </div>
+                            <div class="event-form-actions">
+                                <button type="submit" class="btn">Submit Registration</button>
+                                <button type="button" class="btn btn-secondary" id="event-modal-cancel">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <div id="shop-page" class="page-hidden">
                     <div class="content-section">
                         <h2>Self-Service Supply Shop</h2>
