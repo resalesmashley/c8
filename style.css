@@ -1669,6 +1669,59 @@ tr:hover {
     position: relative;
 }
 
+.event-modal {
+    background: rgba(10, 31, 54, 0.6);
+}
+
+.event-modal-content {
+    max-width: 700px;
+    overflow: hidden;
+}
+
+.event-modal-header {
+    background: linear-gradient(135deg, #1e4365 0%, #2b6f8d 100%);
+    color: white;
+    padding: 1.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.event-modal-subtitle {
+    margin: 0.25rem 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+.event-form {
+    background: linear-gradient(165deg, #f7fbff 0%, #eef4fb 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.event-form-body {
+    padding: 1.75rem 2rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.event-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.event-form-actions {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(44, 95, 141, 0.1);
+}
+
 .lesson-plan-modal .modal-body {
     padding: 2rem;
     overflow-y: auto;
