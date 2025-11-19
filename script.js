@@ -3567,8 +3567,8 @@ const SHOP_PRODUCTS = [
         description: 'Juice boxes, pretzels, and fruit cups for a full classroom.',
         price: 14,
         badge: 'Top pick',
-        image: 'https://pixabay.com/get/gcf60c436f524e038813e9d265059704d85713122e914c44b11347a73aa81a6bd7682875a400a8b82bf33b8dd4d8c7291c4c82b0906bbb18d7291bfc6cedd238e_1280.jpg',
-        imageAlt: 'Colorful wrapped snacks spilling out of a classroom treat jar.'
+        image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Colorful fruit cups and pretzels laid out for a group snack.'
     },
     {
         id: 'craft-kit',
@@ -3576,8 +3576,8 @@ const SHOP_PRODUCTS = [
         description: 'Prepped supplies for 12 kids with step-by-step instructions.',
         price: 18,
         badge: 'Ready to use',
-        image: 'https://pixabay.com/get/gec7f761c81c58eab4e0dddbb79c4c35794aa74253920d72fb761ca3b0d08fded0f82afe7ade8a8b07a5b225b63430142ca13e23140bb09ab51729bf160e0a296_1280.jpg',
-        imageAlt: 'Rows of sharpened colored pencils ready for a classroom craft.'
+        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1080&q=80',
+        imageAlt: 'Rows of sharpened colored pencils and craft supplies on a desk.'
     },
     {
         id: 'volunteer-tee',
@@ -3585,7 +3585,7 @@ const SHOP_PRODUCTS = [
         description: 'Soft cotton shirt with BCC logo. Unisex sizing.',
         price: 22,
         badge: 'New',
-        image: 'https://images.unsplash.com/photo-1618354691714-7d92150909db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTAxMTZ8MHwxfHNlYXJjaHwzfHxzdGFjayUyMG9mJTIwdm9sdW50ZWVyJTIwdCUyMHNoaXJ0c3xlbnwwfDB8fHwxNzYzMzQxMzE0fDA&ixlib=rb-4.1.0&q=80&w=1080',
+        image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1080&q=80',
         imageAlt: 'Stack of soft volunteer t-shirts folded on a table.'
     },
     {
@@ -3594,8 +3594,8 @@ const SHOP_PRODUCTS = [
         description: 'Includes 30 stickers and 10 reusable sleeves.',
         price: 9,
         badge: 'Classroom essential',
-        image: 'https://pixabay.com/get/g3559acccfce7216ff9e7dc0d8bdbb2b0d2989f72bd535d5308f8ceb43436d5f2a991dcce9685aa3aff0fc303443d8efa8185d89751831e9bad498a62e87ce425_1280.jpg',
-        imageAlt: 'Organized classroom supplies with scissors, tape, and pencils on a desk.'
+        image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80',
+        imageAlt: 'Organized craft supplies with scissors, tape, and pens on a desk.'
     },
     {
         id: 'clean-up',
@@ -3603,8 +3603,8 @@ const SHOP_PRODUCTS = [
         description: 'Disinfecting wipes, tissues, and hand sanitizer trio.',
         price: 12,
         badge: 'Staff favorite',
-        image: 'https://images.unsplash.com/photo-1759846866217-e627e4478f82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTAxMTZ8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMHN1cHBsaWVzJTIwYnVja2V0fGVufDB8MHx8fDE3NjMzNDE2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-        imageAlt: 'Colorful cleaning supplies arranged in a bucket and tray.'
+        image: 'https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Gloved hands holding a spray bottle and microfiber cloth over a countertop.'
     }
 ];
 
